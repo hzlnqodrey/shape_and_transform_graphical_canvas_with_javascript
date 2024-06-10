@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Implementasi Tugas Akhir Grafkom - Shape dan Transformasi | 123190080 </title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Implementasi Tugas Akhir Grafkom - Shape dan Transformasi | 123190080</h1>
+    <div class="toolbar">
+        <button onclick="setMode('lineDDA')">Line DDA</button>
+        <button onclick="setMode('lineBresenham')">Line Bresenham</button>
+        <button onclick="setMode('circleMidpoint')">Circle Midpoint</button>
+        <button onclick="setMode('ellipseMidpoint')">Ellipse Midpoint</button>
+        <button id="showTransformDialog">Transform</button>
+        <button onclick="clearCanvas()">Clear Canvas</button>
+        <button onclick="downloadCanvas()">Download Image</button>
+    </div>
+    <canvas id="canvas" width="800" height="600"></canvas>
+    <div id="transformDialog" class="dialog">
+        <h2>Transform Shape</h2>
+        <label for="transformType">Transform Type:</label>
+        <select id="transformType">
+            <option value="translate">Translate</option>
+            <option value="rotate">Rotate</option>
+            <option value="scale">Scale</option>
+            <option value="reflect">Reflect</option>
+        </select>
+        <div id="translateFields" class="transformFields">
+            <label for="dx">dx:</label>
+            <input type="number" id="dx" value="0">
+            <label for="dy">dy:</label>
+            <input type="number" id="dy" value="0">
+        </div>
+        <div id="rotateFields" class="transformFields">
+            <label for="angle">Angle:</label>
+            <input type="number" id="angle" value="0">
+        </div>
+        <div id="scaleFields" class="transformFields">
+            <label for="sx">sx:</label>
+            <input type="number" id="sx" value="1">
+            <label for="sy">sy:</label>
+            <input type="number" id="sy" value="1">
+        </div>
+        <div id="reflectFields" class="transformFields">
+            <label for="axis">Axis:</label>
+            <select id="axis">
+                <option value="x">X</option>
+                <option value="y">Y</option>
+            </select>
+        </div>
+        <button id="applyTransform">Apply</button>
+        <button id="cancelTransform">Cancel</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
